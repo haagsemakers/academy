@@ -1,0 +1,6 @@
+<div class="alert-wrapper">
+  <div *ngFor="let alert of alerts" class="has-text-centered notification {{ cssClass(alert) }}">
+    <button (click)="removeAlert(alert)" class="delete"></button>
+    {{alert.message}}
+  </div>
+</div>
