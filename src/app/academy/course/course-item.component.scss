@@ -1,0 +1,31 @@
+.hero {
+  h1 {
+    text-shadow: 1px 1px 3px #333;
+    color: #FFF;
+  }
+  h2 {
+    text-shadow: 1px 1px 1px #333;
+    color: #FFF;
+  }
+}
+
+p {
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+section.content-body {
+  padding: 3rem 0;
+}
+.section {
+  padding: 1rem 0;
+}
+
+.rsvp {
+  a {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

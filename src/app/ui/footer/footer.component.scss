@@ -1,14 +1,17 @@
 
 footer.app-footer {
-  background-color: #f8f8f8;
   font-size: 14px;
-  padding: 50px 0 70px 0;
-  line-height: 1.6;
-  img {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding-right: 30px;
+  color: #808080;
+  font-weight: 400;
+  padding: 30px 0 0;
+  background-color: #3d4045;
+  .widget-title {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
   }
   ul {
     list-style: none;
@@ -16,42 +19,27 @@ footer.app-footer {
     padding: 0;
     margin-bottom: 20px;
     li {
-      &.footer-title {
-        color: #3d3d3d;
-        font-weight: 600;
-        font-size: 15px;
-        padding-bottom: 15px;
-        text-decoration: none;
+      i {
+        width: 20px;
       }
       a {
         font-size: 13px;
         padding-bottom: 5px;
+        color: #808080;
         &:hover {
-          color: #444;
+          color: #808080;
+          text-decoration: underline;
         }
       }
     }
   }
-  .copy {
-    margin-top: 50px;
-    border-bottom: 1px solid #e2e2e2;
-    border-top: 1px solid #e2e2e2;
-    font-size: 0.8rem;
-    color: #a9a9a9;
-    padding: 20px 0;
-  }
-  .buttons {
-    text-align: right;
-  }
 }
 
-a.brand {
-  padding: inherit;
-  text-align: center;
-  display: block;
-  img {
-    margin: 0 auto;
-    padding: 0;
-  }
-  font-weight: 600;
+.sub-footer {
+  background-color: #43474d;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #8c8e91;
+  font-weight: 400;
+  padding: 25px 0;
 }

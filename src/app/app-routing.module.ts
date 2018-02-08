@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './ui/home/home.component';
-
+import { CourseItemComponent } from './academy/course/course-item.component';
 
 const routes:Routes = [
 
@@ -12,6 +12,12 @@ const routes:Routes = [
     data: {
       title: 'Home',
       bodyClass: 'home'
+    }
+  },
+  { path: 'course/:id', component: CourseItemComponent,
+    data: {
+      title: 'Cursus',
+      bodyClass: 'course'
     }
   },
 

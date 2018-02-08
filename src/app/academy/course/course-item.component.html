@@ -1,0 +1,82 @@
+<section class="hero is-medium"
+  [ngStyle]="{'background-image': 'url(assets/img/' + course.featured_img + ')'}"
+  style="background-size:cover; background-position:center center">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <h1 class="title">{{course.title}}</h1>
+      <h2 class="subtitle">{{course.subtitle}}</h2>
+    </div>
+  </div>
+</section>
+
+<section class="content-body">
+  <div class="container">
+    <div class="columns">
+      <div class="column main-content">
+        <div class="section">
+          <h3 class="title is-3">Over deze workshop</h3>
+          <div [innerHTML]="course.description"></div>
+        </div>
+
+        <div class="section">
+          <h3 class="title is-3">Wat ga ik leren? </h3>
+          <p>Aan het einde van deze cursus heb/kun je:</p>
+          <ul>
+            <li *ngFor="let objective of course.objectives">
+            {{ objective.title }}</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 class="title is-3">Sessies</h3>
+          <ul>
+            <li *ngFor="let session of course.sessions">
+              <h4 class="title is-4">{{ session.title }}</h4>
+              {{ session.description }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3 class="title is-3">Docent(en)</h3>
+          <ul><li *ngFor="let teacher of course.teachers">{{ teacher.name }}</li></ul>
+        </div>
+
+        <div class="section">
+          <h3 class="title is-3">Workshop details</h3>
+          <table class="table is-size-7">
+            <tr>
+              <td class="has-text-weight-semibold">Taal</td><td>{{course.language}}</td>
+            </tr>
+            <tr>
+              <td class="has-text-weight-semibold">Locatie</td><td>The Hague Tech</td>
+            </tr>
+            <tr>
+              <td class="has-text-weight-semibold">Aangeboden door</td><td>Haagse Makers</td>
+            </tr>
+            <tr>
+              <td class="has-text-weight-semibold">Certificaat</td><td>Na afronding van deze workshop ontvang je een certificaat van de Haagse Makers Academy.</td>
+            </tr>
+            <tr>
+              <td class="has-text-weight-semibold">Vragen?</td><td>Stuur een mailtje naar academy@haagsemakers.nl</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="column is-3 sidebar">
+        <div class="rsvp">
+          <h2 class="title is-2">Aanmelden</h2>
+          <p>{{ course.title }}</p>
+          <p>{{ course.code }}</p>
+          <a class="button is-primary is-outlined">Aanmelden</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-footer">
+  <div class="container">
+
+  </div>
+</section>

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+
 
 import { CoreService } from './../../core/core.service';
 // import { AuthService } from './../../core/auth.service';
@@ -7,13 +8,14 @@ import { AcademyService } from './../../academy/academy.service';
 
 @Component({
   moduleId: module.id,
-  templateUrl: 'home.component.html',
-  styleUrls: ['home.component.scss']
+  templateUrl: 'course-item.component.html',
+  styleUrls: ['course-item.component.scss']
 })
 
-export class HomeComponent implements OnInit {
+export class CourseItemComponent implements OnInit, OnDestroy {
 
-  public courses:any[];
+  public course:any;
+  private sub: any;
 
   constructor (
     // public auth:AuthService,
@@ -26,7 +28,12 @@ export class HomeComponent implements OnInit {
   ngOnInit():void {
     this.coreService.setTitle(this.route.snapshot.data.title);
     this.coreService.addBodyClass(this.route.snapshot.data.bodyClass);
-    this.courses = this.academyService.index({});
+
+    this.sub = this.route.params.subscribe(params => {
+       this.course = this.academyService.getCourse({ slug: params['id']}); // (+) converts string 'id' to a number
+
+       // In a real app: dispatch action to load the details here.
+    });
   }
 
   ngOnDestroy():void {

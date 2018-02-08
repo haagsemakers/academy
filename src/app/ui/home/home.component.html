@@ -13,35 +13,15 @@
 
 <section class="hero second-slide">
   <ul class="cards">
-  <li class="cards__item">
-    <div class="card">
-      <div class="card__image card__image--fence"></div>
-      <div class="card__content">
-        <div class="card__title">Arduino Basis</div>
-        <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
-        <button class="btn btn--block card__btn">Button</button>
+    <li class="cards__item" *ngFor="let course of courses">
+      <div class="card">
+        <div class="card__image" [ngStyle]="{'background-image': 'url(assets/img/' + course.featured_img + ')' }"></div>
+        <div class="card__content">
+          <div class="card__title">{{ course.title }}</div>
+          <p class="card__text">{{ course.abstract }}</p>
+          <a [routerLink]="['/course', course.slug]" class="btn btn--block card__btn" >Lees meer</a>
+        </div>
       </div>
-    </div>
-  </li>
-  <li class="cards__item">
-    <div class="card">
-      <div class="card__image card__image--river"></div>
-      <div class="card__content">
-        <div class="card__title">The Things Network Connect Basis (IoT)</div>
-        <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
-        <button class="btn btn--block card__btn">Button</button>
-      </div>
-    </div>
-  </li>
-  <li class="cards__item">
-    <div class="card">
-      <div class="card__image card__image--record"></div>
-      <div class="card__content">
-        <div class="card__title">Jouw workshop hier?</div>
-        <p class="card__text">Kun jij een workshop geven voor vindingrijk Den Haag? Meld je aan!</p>
-        <button class="btn btn--block card__btn">Button</button>
-      </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
 </section>

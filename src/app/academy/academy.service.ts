@@ -16,4 +16,14 @@ export class AcademyService {
     return courses;
   }
 
+  public getCourse(options):any {
+    let c={}
+    courses.forEach(function(value) {
+      if (value.slug===options.slug) {
+        console.log(value);
+        c=value;
+      }
+    });
+    return c;
+  }
 }
