@@ -18,18 +18,17 @@
           <div [innerHTML]="course.description"></div>
         </div>
 
-        <div class="section">
+        <div class="section section-objectives">
           <h3 class="title is-3">Wat ga ik leren? </h3>
-          <p>Aan het einde van deze cursus heb/kun je:</p>
-          <ul>
+          <ul class="objectives-list">
             <li *ngFor="let objective of course.objectives">
-            {{ objective.title }}</li>
+            <i class="fa fa-check"></i> {{ objective.title }}</li>
           </ul>
         </div>
 
-        <div class="section">
+        <div class="section section-sessions">
           <h3 class="title is-3">Sessies</h3>
-          <ul>
+          <ul class="sessions-list">
             <li *ngFor="let session of course.sessions">
               <h4 class="title is-4">{{ session.title }}</h4>
               {{ session.description }}
@@ -65,8 +64,8 @@
       </div>
       <div class="column is-3 sidebar">
         <div class="rsvp">
-          <h2 class="title is-2">Aanmelden</h2>
-          <p>{{ course.title }}</p>
+          <h3 class="title is-3">Aanmelden</h3>
+          <p><strong>{{ course.title }}</strong></p>
           <p>{{ course.code }}</p>
           <a class="button is-primary is-outlined">Aanmelden</a>
         </div>

@@ -12,7 +12,7 @@
 p {
   font-size: 1rem;
   color: #000;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   line-height: 1.8;
 }
 
@@ -23,7 +23,18 @@ section.content-body {
   padding: 1rem 0;
 }
 
+ul.sessions-list {
+  li {
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 1rem;
+  }
+}
 .rsvp {
+  border: 1px solid #efefef;
+  padding: 20px;
+  background: #fcfcfc;
   a {
     width: 100%;
     margin: 1rem 0;

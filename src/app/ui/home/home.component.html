@@ -1,6 +1,6 @@
 <section class="hero first-slide is-primary is-medium">
   <div class="hero-body has-text-centered">
-    <div class="container">
+    <div class="container is-fluid">
       <h1 class="title is-size-1">Maak het! Met de Haagse Makers Academy</h1>
       <br>
       <h2 class="subtitle is-size-3">
@@ -11,17 +11,21 @@
   </div>
 </section>
 
-<section class="hero second-slide">
-  <ul class="cards">
-    <li class="cards__item" *ngFor="let course of courses">
-      <div class="card">
-        <div class="card__image" [ngStyle]="{'background-image': 'url(assets/img/' + course.featured_img + ')' }"></div>
-        <div class="card__content">
-          <div class="card__title">{{ course.title }}</div>
-          <p class="card__text">{{ course.abstract }}</p>
-          <a [routerLink]="['/course', course.slug]" class="btn btn--block card__btn" >Lees meer</a>
-        </div>
-      </div>
-    </li>
-  </ul>
+<section class="second-slide">
+
+    <div class="container">
+      <ul class="cards">
+        <li class="cards__item" *ngFor="let course of courses">
+          <div class="card">
+            <div class="card__image" [ngStyle]="{'background-image': 'url(assets/img/' + course.featured_img + ')' }"></div>
+            <div class="card__content">
+              <div class="card__title">{{ course.title }}</div>
+              <p class="card__text">{{ course.abstract }}</p>
+              <a [routerLink]="['/course', course.slug]" class="btn btn--block card__btn" >Lees meer</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
 </section>

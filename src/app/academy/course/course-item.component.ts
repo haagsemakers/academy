@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 
@@ -9,7 +9,8 @@ import { AcademyService } from './../../academy/academy.service';
 @Component({
   moduleId: module.id,
   templateUrl: 'course-item.component.html',
-  styleUrls: ['course-item.component.scss']
+  styleUrls: ['course-item.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class CourseItemComponent implements OnInit, OnDestroy {
