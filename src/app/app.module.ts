@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {StickyModule} from 'ng2-sticky-kit';
 
 import { AppComponent } from './app.component';
 
@@ -24,6 +25,7 @@ import { env } from './../environments/environment';
   ],
   imports: [
     BrowserModule,
+    StickyModule,
     AppRoutingModule,
     RecaptchaModule.forRoot(),
     RecaptchaFormsModule,

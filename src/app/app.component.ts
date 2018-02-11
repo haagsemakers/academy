@@ -19,7 +19,6 @@ export class AppComponent {
     this.loading=false;
     this.router.events.subscribe((event:NavigationEvent) => {
       if (event instanceof NavigationEnd) {
-        console.log(event);
         window.scroll(0, 0);
       }
     });

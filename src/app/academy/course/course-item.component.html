@@ -57,18 +57,21 @@
               <td class="has-text-weight-semibold">Certificaat</td><td>Na afronding van deze workshop ontvang je een certificaat van de Haagse Makers Academy.</td>
             </tr>
             <tr>
-              <td class="has-text-weight-semibold">Vragen?</td><td>Stuur een mailtje naar academy@haagsemakers.nl</td>
+              <td class="has-text-weight-semibold">Vragen?</td><td>Stuur een mailtje naar <a href="mailto:academy@haagsemakers.nl">academy@haagsemakers.nl</a></td>
             </tr>
           </table>
         </div>
       </div>
       <div class="column is-3 sidebar">
-        <div class="rsvp">
-          <h3 class="title is-3">Aanmelden</h3>
-          <p><strong>{{ course.title }}</strong></p>
-          <p>{{ course.code }}</p>
-          <a class="button is-primary is-outlined">Aanmelden</a>
-        </div>
+
+        <sticky [sticky-offset-top]="30" [sticky-media-query]="'min-width: 960px'">
+          <div class="rsvp">
+            <h3 class="title is-3">Aanmelden</h3>
+            <p><strong>{{ course.title }}</strong></p>
+            <p>{{ course.code }}</p>
+            <a class="button is-primary is-outlined">Aanmelden</a>
+          </div>
+        </sticky>
       </div>
     </div>
   </div>

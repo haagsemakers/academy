@@ -7,3 +7,20 @@
     margin: 0 24px;
   }
 }
+
+
+// STICKY BOX
+.sticky-box {
+  position: relative;
+  overflow: hidden;
+  &.sticky-fix {
+    > div {
+      &.top {
+        position: fixed;
+      }
+      &.bottom {
+        position: absolute;
+      }
+    }
+  }
+}
