@@ -1,6 +1,9 @@
 .container {
-  margin-left: 32px;
-  margin-right: 32px;
-  max-width: none;
-  width: auto;
+  max-width: 960px;
+  margin:0 auto;
+}
+@media(max-width: 960px) {
+  .container {
+    margin: 0 24px;
+  }
 }

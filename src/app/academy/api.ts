@@ -9,7 +9,7 @@ export const courses = [
     slug: 'arduino-basis',
     abstract: "This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.",
     description: "This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.",
-    category: ['tech'],
+    categories: ['tech'],
     language: 'De workshop is in het Nederlands.',
     objectives: [
       { title: 'Basiskennis Arduino' },
@@ -44,7 +44,7 @@ export const courses = [
     slug: 'ttn-connect-basis',
     abstract: "This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.",
     description: "<p>Over four weeks, you’ll develop your knowledge of simple electronics and computing, setting up your Raspberry Pi and writing your first program using the Python programming language.</p><p>You’ll apply your newfound knowledge to a series of challenges, including controlling an LED with Python, using a button press to control a circuit, and making a button and LED game.</p><p>If you’re a teacher, you’ll also have the chance to develop ideas for using the Raspberry Pi and Python in your classroom, and to connect with a network of other educators.</p>",
-    category: ['tech'],
+    categories: ['tech'],
     language: 'De workshop is in het Nederlands.',
     objectives: [
       { title: 'Basiskennis Arduino' },

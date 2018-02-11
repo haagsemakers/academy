@@ -1,62 +1,11 @@
-nav {
-  background-color: #FFF;
-  padding: 0 5vw;
-  padding-right: 60px;
-  border-bottom: 0;
-  height: 8vh;
-  z-index: 10;
-  .navbar-brand {
-    a.navbar-item {
-      color: #333;
-      font-weight: 600;
-      border-bottom: 0;
-      &:hover {
-        color: #333;
-        background-color: transparent;
-        text-decoration: none;
-      }
+nav.navbar {
+  a.navbar-item {
+    &:hover {
+      color: #000;
     }
-  }
-  .navbar-begin {
-
-  }
-  .navbar-end {
-    .navbar-item {
-      padding: 0.5rem 1rem;
-      margin-left: 0.5rem;
+    &.active {
       color: #000;
       font-weight: 600;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      &:hover {
-        text-decoration: none;
-      }
-      &.active {
-
-      }
-      &.register {
-        border: 2px solid;
-        margin: 20px 0;
-      }
-      img.picture {
-        border-radius: 50%;
-        margin: 0 5px;
-        width: 32px;
-        height: 32px;
-        max-height: 32px;
-        background-color: #FFFFFF;
-      }
-    }
-
-    .navbar-item.account {
-      .navbar-link,
-      .navbar-item {
-        text-transform: none;
-        letter-spacing: 0;
-        &::after {
-          border-color: rgba(0,0,0,0.5);
-        }
-      }
     }
   }
 }

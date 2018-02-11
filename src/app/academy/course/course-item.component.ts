@@ -27,13 +27,11 @@ export class CourseItemComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit():void {
-    this.coreService.setTitle(this.route.snapshot.data.title);
     this.coreService.addBodyClass(this.route.snapshot.data.bodyClass);
 
     this.sub = this.route.params.subscribe(params => {
-       this.course = this.academyService.getCourse({ slug: params['id']}); // (+) converts string 'id' to a number
-
-       // In a real app: dispatch action to load the details here.
+       this.course = this.academyService.getCourse({ slug: params['id']});
+       this.coreService.setTitle(this.course.title);
     });
   }
 

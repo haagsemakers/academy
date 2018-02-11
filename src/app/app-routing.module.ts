@@ -6,9 +6,9 @@ import { CourseItemComponent } from './academy/course/course-item.component';
 
 const routes:Routes = [
 
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  // { path: '', redirectTo: '/home', pathMatch: 'full' },
 
-  { path: 'home', component: HomeComponent,
+  { path: '', component: HomeComponent,
     data: {
       title: 'Home',
       bodyClass: 'home'
